@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 #from audio_classifier import AudioClassifier  
@@ -6,8 +7,10 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Set the path where uploaded audio files will be stored
-UPLOAD_FOLDER = 'uploads'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+
+#UPLOAD_FOLDER = 'uploads'
+#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Allowed file extensions
 ALLOWED_EXTENSIONS = {'wav'}
