@@ -23,7 +23,7 @@ The audio classifier service is now available at https://orfium-audio-classifier
 ## Instructions to set up and run the service 
 1. set up an account with Heroku. Payment information is required to create an app.
 
-Note: I’m not subscribing to Eco Dyno plan but just use Dyno basic hour since I intend to have the service available only for the duration of this assignment.
+Note: I’m not subscribing to Eco Dyno plan but just use Dyno basic hour since I intend to have the service available only for the duration of this assignment. I can turn the server on or off with a toggle on resources tab on the dashboard page.
 
 2. heroku container: login
 
