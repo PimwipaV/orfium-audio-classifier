@@ -37,15 +37,15 @@ Note: I’m not subscribing to Eco Dyno plan but just use Dyno basic hour since 
 ## Architecture of my solution
 ![components_interactions](https://github.com/PimwipaV/orfium-audio-classifier/assets/36345485/769f4872-c7ee-4058-9d65-c3c1dbcd794c)
 There are 4 main components in my system;
-1. **Flask app** (app.py) written in Python, handling routes, application logic, and requests
+1. **Flask app** (app.py) written in Python, handling routes, application logic, and requests, with the ML component abstracted away
 2. **Docker container** (Dockerfile) that packages the app and its dependencies to be able to run the app across different environments
 3. **Gunicorn server** that runs my app with standardized interface (WSGI) between Python app and web servers
 4. **Heroku hosting platform** where I deployed my containerized app with Procfile as its configuration
 
 I haven’t included API Gateway at this point because now there is only 1 module and relatively high number of requests. If there are more components added to the system or the app grows in popularity, we can consider adding an API Gateway in front of the app.
 
-Regarding error handling, there are parts in the app.py code that does the job e.g. checking if the uploading file is of allowed extension, checking if the file is present.
+Regarding error handling, there are parts in the app.py code that does the job e.g. checking if the uploading file is of allowed extension, checking if the file is present. It has also been tested for the sending of the requests to the endpoints using curl and using requests library.
 
-So,there goes my audio classifier service with the ML component abstracted away.
+So,there goes my audio classifier service.
 
 I had fun implementing the service and looking forward to more!
