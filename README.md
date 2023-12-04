@@ -15,7 +15,7 @@ The audio classifier service is now available at https://orfium-audio-classifier
 
 
 
-3. With its Procfile that I can specify numbers of workers (4 as of now), I can approximately calculate number of requests to be between **2-8 requests per second** depends on the response time of the ML component (500ms to 2 seconds). With this multi-process capability, I hope that it qualifies for ‘relatively high’ number of requests it can handle.
+3. With its Procfile that I can specify numbers of workers (4 as of now), I can approximately calculate number of requests it can handle to be between **2-8 requests per second** depends on the response time of the ML component (500ms to 2 seconds). With this multi-process capability, I hope that it qualifies for ‘relatively high’ number of requests it can handle.
 
 
 
