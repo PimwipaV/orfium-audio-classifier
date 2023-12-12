@@ -7,7 +7,7 @@ After some research, I decided to host my audio classifier service on **Heroku**
 1. it’s the cheapest option to host a service ($0.01/hour max$7/month, available 24/7) compared to other similar services e.g. AWS Fargate or EC2 where my 12-month free tier has expired.
 
 The audio classifier service is now available at https://orfium-audio-classifier-457d57532354.herokuapp.com/
-**edit 07/12/23 I have turned off the server. please let me know if I should turn it on again**
+
 
 2. Heroku provides **monitoring tool e.g. New Relic** as an add-on for free that can measure throughput (requests per second), response time, and memory usage without further configuration. Here’s a screenshot.
 
